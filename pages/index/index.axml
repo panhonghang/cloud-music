@@ -1,0 +1,13 @@
+<view style="padding: 12px;">
+  <tabs
+    tabs="{{tabs}}"
+    tabsName="activeTab"
+    onTabClick="handleTabClick"
+  >
+    <block a:for="{{tabs}}" a:if="{{!hasContentHeight}}">
+      <tab-content key="{{index}}">
+        <view class="tab-content">{{item.title}}</view>
+      </tab-content>
+    </block>
+  </tabs>
+</view>

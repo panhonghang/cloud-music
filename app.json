@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login"
+  ],
+  "window": {
+    "defaultTitle": "云音乐",
+    "titleBarColor": "#d44439"
+  }
+}

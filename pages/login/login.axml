@@ -1,0 +1,6 @@
+<view class="container">
+  <image class="userImg" mode="scaleToFill" src="{{userInfo.avatar}}"/>
+  <text>Hi,{{userInfo.nickName}}!</text>
+  <text>欢迎来到支付宝小程序版本的cloud-music</text>
+  <button class="gohome-button" size="default" onTap="goHome" type="primary">开启体验之旅</button>
+</view>

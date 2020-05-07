@@ -1,0 +1,27 @@
+.container{
+  background-color: #d44439;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  overflow: hidden;
+}
+.userImg{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  margin-top: -300rpx;
+  display: block;
+  border-radius: 200rpx;
+}
+text{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.gohome-button{
+  border-radius: 100rpx;
+  width: 300rpx;
+  text-align: center;
+  font-size: 30rpx;
+}

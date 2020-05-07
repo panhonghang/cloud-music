@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "title": "mini-ali-ui/es/title/index",
+    "tabs": "mini-ali-ui/es/tabs/index",
+    "tab-content": "mini-ali-ui/es/tabs/tab-content/index"
+  }
+}
