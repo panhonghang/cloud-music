@@ -1,0 +1,15 @@
+.grid-box{
+  display: grid; 
+}
+
+.card{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10rpx;
+  font-size: 20rpx;
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+.card image{
+    width: 240rpx;
+    height: 240rpx;
+}

@@ -16,10 +16,6 @@
   <view>
     <text>推荐歌单</text>
     <view style="margin-top: 10px;" />
-    <grid columnNum="{{2}}" list="{{card}}" >
-      <view>
-        {{item}}
-      </view>
-    </grid>
+    <grid lists="{{card}}"></grid>
   </view>
 </view>
