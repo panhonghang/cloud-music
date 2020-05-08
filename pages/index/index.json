@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents":{
+    "grid":"mini-ali-ui/es/grid/index"
+  }
+}

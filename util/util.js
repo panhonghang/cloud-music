@@ -17,12 +17,33 @@ const checkStorge = (checkingKey)=>{
       });
      })
   }
-
+  
+// 返回首页
 const goHome = ()=>{
   my.navigateBack();
 }
 
+const axios = (obj)=>{
+  return new Promise((resolve,reject)=>{
+    my.request({
+      url: obj.url,
+      method: obj.method,
+      headers:{
+        'content-type':'application/json'  //默认值
+      },
+      dataType: 'json',
+      success: function(res) {
+        resolve(res);
+      },
+      fail: function(res) {
+        reject(res)
+      }
+    });
+  })
+}
+
 export default {
     checkStorge,
-    goHome
+    goHome,
+    axios
   };
