@@ -1,0 +1,31 @@
+.swiper-item{
+  display: block;
+  height: 150px;
+  margin:10px;
+  color: #fff;
+  text-align: center;
+  line-height: 150px;
+  font-size: 20px;
+}
+
+
+button {
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+}
+
+.bc_blue {
+  background-color: #49A9EE;
+}
+
+.bc_red {
+  background-color: #F04134;
+}
+
+.bc_yellow {
+  background-color: #FFBF00;
+}
+
+.bc_green {
+  background-color: #00A854;
+}

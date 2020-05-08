@@ -1,127 +1,18 @@
 import {checkStorge} from '../../util/util';
 
 Page({
-  data: {
-    tabs: [
-      {
-        title: '推荐',
-        subTitle: '描述文案',
-        number: '6',
-      },
-      {
-        title: '歌手',
-        subTitle: '描述文案描述',
-        number: '66',
-      },
-      {
-        title: '排行榜',
-        subTitle: '描述',
-        number: '99+',
-      }
+    data: {
+    background: [
+      { color: 'blue', text: '支付宝' },
+      { color: 'red', text: '小程序' },
+      { color: 'yellow', text: 'Swiper' }
     ],
-  },
-  tabsNumberChange(e) {
-    if (e.detail.value === '1') {
-      this.setData({
-        tabs: [
-          {
-            title: '选项',
-            subTitle: '描述文案',
-            number: '6',
-          },
-        ],
-      });
-    } else if (e.detail.value === '2') {
-      this.setData({
-        tabs: [
-          {
-            title: '选项',
-            subTitle: '描述文案',
-            number: '6',
-          },
-          {
-            title: '选项二',
-            subTitle: '描述文案描述',
-            number: '66',
-          },
-        ],
-      });
-    } else if (e.detail.value === '3') {
-      this.setData({
-        tabs: [
-          {
-            title: '选项',
-            subTitle: '描述文案',
-            number: '6',
-          },
-          {
-            title: '选项二',
-            subTitle: '描述文案描述',
-            number: '66',
-          },
-          {
-            title: 'Tab',
-            subTitle: '描述',
-            number: '99+',
-          },
-        ],
-      });
-    } 
-  },
-  typeChange(e) {
-    if (e.detail.value === 'hasSubTitle') {
-      this.setData({
-        typeCapsule: true,
-        typeHasSubTitle: true,
-      });
-    } else if (e.detail.value === 'capsule') {
-      this.setData({
-        typeCapsule: true,
-        typeHasSubTitle: false,
-      });
-    } else {
-      this.setData({
-        typeCapsule: false,
-        typeHasSubTitle: false,
-      });
-    }
-  },
-  plusChange(e) {
-    if (e.detail.value === 'hasnt') {
-      this.setData({
-        hasPlus: false,
-      });
-    } else {
-      this.setData({
-        hasPlus: true,
-      });
-    }
-  },
-  heightChange(e) {
-    if (e.detail.value === 'hasnt') {
-      this.setData({
-        hasContentHeight: false,
-      });
-    } else {
-      this.setData({
-        hasContentHeight: true,
-      });
-    }
-  },
-  handleTabClick({ index, tabsName }) {
-    this.setData({
-      [tabsName]: index,
-    });
-  },
-  handleTabChange({ index, tabsName }) {
-    this.setData({
-      [tabsName]: index,
-    });
-  },
-  handlePlusClick() {
-    my.alert({
-      content: 'plus clicked',
-    });
+    indicatorDots: true,
+    autoplay: true,
+    vertical: false,
+    interval: 1000,
+    circular: false,
+    duration: 1500,
   },
   onLoad() {
     checkStorge('userInfo').then(
@@ -135,4 +26,23 @@ Page({
       });
     })
   },
+  onShow(){
+    my.request({
+      url: '/api/banner',
+      method: 'GET',
+      headers:{
+        'content-type':'application/json'  //默认值
+      },
+      dataType: 'json',
+      success: function(res) {
+        console.log('aaaaaaaaaaaaaaaaa',res.data.banners);
+      },
+      fail: function(res) {
+        my.alert({content: 'fail'});
+      },
+      complete: function(res) {
+        my.hideLoading();
+      }
+    });
+  }
 });

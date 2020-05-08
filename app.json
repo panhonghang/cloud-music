@@ -1,10 +1,31 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/singer/singer",
+    "pages/rank/rank"
   ],
   "window": {
     "defaultTitle": "云音乐",
     "titleBarColor": "#d44439"
+  },
+  "tabBar": {
+    "textColor": "#eeeeee",
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#d44439",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "推荐"
+      },
+      {
+        "pagePath": "pages/singer/singer",
+        "name": "歌手"
+      },
+       {
+        "pagePath": "pages/rank/rank",
+        "name": "排名"
+      }
+    ]
   }
 }
