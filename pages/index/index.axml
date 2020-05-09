@@ -1,4 +1,5 @@
 <view>
+  <view class="top-box"></view>
   <swiper
     class="swiper"
     indicator-dots="{{indicatorDots}}"

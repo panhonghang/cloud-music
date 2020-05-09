@@ -1,7 +1,7 @@
 Component({
   mixins: [],
   data: {},
-  props: {lists:[{copywriter:"",picUrl:"",name:''}]},
+  props: {lists:[]},
   didMount() {},
   didUpdate() {},
   didUnmount() {},

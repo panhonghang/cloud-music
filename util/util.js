@@ -22,7 +22,7 @@ const checkStorge = (checkingKey)=>{
 const goHome = ()=>{
   my.navigateBack();
 }
-
+// 异步请求
 const axios = (obj)=>{
   return new Promise((resolve,reject)=>{
     my.request({
@@ -41,9 +41,15 @@ const axios = (obj)=>{
     });
   })
 }
+// 数字转换单位
+const NumberToUnit = function(num){
+  if(num/100000000>1) return (num/10000).toFixed(2)+"亿";
+  if(num/10000>1) return (num/10000).toFixed(2)+"万"
+}
 
 export default {
     checkStorge,
     goHome,
-    axios
+    axios,
+    NumberToUnit
   };

@@ -1,4 +1,4 @@
-import {checkStorge,axios} from '../../util/util';
+import {checkStorge,axios,NumberToUnit} from '../../util/util';
 
 Page({
   data: {
@@ -26,18 +26,24 @@ Page({
   onShow(){
     // banner图
     axios({
-      url:'https://anymock.alipay.com/mockdata/http/112050354_ba457aa259f8ffa55cd7d41aa312bfab/%2Fapi/banner',
+      url:'/banner',
       method:"GET"
     }).then((res)=>{
       this.setData({img:res.data.banners})
     })
     // 推荐歌单
     axios({
-      url:'https://anymock.alipay.com/mockdata/http/112050354_ba457aa259f8ffa55cd7d41aa312bfab/%2Fpersonalized',
+      url:'/personalized',
       method:"GET"
     }).then((res)=>{
-      console.log('aaaaaaaaa',res.data.result)
-      this.setData({card:res.data.result},()=>{console.log(this.data)})
+      const arr = res.data.result.map(obj=>{
+        return {
+          name: obj.name,
+          picUrl: obj.picUrl,
+          playCount: NumberToUnit(obj.playCount)
+        }
+      })
+      this.setData({card: arr});
     })
   }
 });

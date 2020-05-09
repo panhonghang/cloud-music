@@ -3,3 +3,12 @@
   height: 160px;
   width: 100%;
 }
+.swiper{
+  width: 96%;
+  margin: 0 auto;
+}
+.top-box{
+  background: red;
+  height: 200rpx;
+  margin-bottom: -150rpx;
+}

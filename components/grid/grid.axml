@@ -4,8 +4,9 @@ grid-template-rows: repeat({{lists.length/3}},300rpx);
 " class="grid-box">
   <view a:for="{{lists}}">
     <view class="card">
+      <text class="playCount">{{item.playCount}}</text>
       <image mode="aspectFit" src="{{item.picUrl}}"/>
-    <text>{{item.name}}</text>
+      <text class="palyname">{{item.name}}</text>
     </view>
   </view>
 </view>
