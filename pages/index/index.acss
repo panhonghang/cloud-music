@@ -8,7 +8,7 @@
   margin: 0 auto;
 }
 .top-box{
-  background: red;
+  background: #d44439;
   height: 200rpx;
   margin-bottom: -150rpx;
 }

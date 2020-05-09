@@ -1,3 +1,6 @@
 <view>
-  歌手
+  <view a:for="{{list}}" class="singer-box">
+    <image class="singerPic" mode="scaleToFill" src="{{item.picUrl}}"/>
+    <text>{{item.name}}</text>
+  </view>
 </view>

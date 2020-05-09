@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/singer/singer",
     "pages/index/index",
     "pages/login/login",
-    "pages/singer/singer",
     "pages/rank/rank"
   ],
   "window": {
