@@ -1,6 +1,7 @@
 .singerPic{
   width: 90rpx;
   height: 90rpx;
+  margin-right: 30rpx;
 }
 .singer-box{
   display: flex;
@@ -18,4 +19,9 @@
   position: absolute;
   transform: scaleY(0.2);
   bottom: -1%;
+}
+.letter{
+  width: 60rpx;
+  display: block;
+  text-align: center;
 }
