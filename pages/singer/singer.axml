@@ -1,13 +1,22 @@
 <view>
-  <view>
-    <text>分类(默认热门)</text>
+  <view class="top">
+    <scroll-view scroll-x="{{true}}" class="x-scroll-box" >
+    <view class="tittle">分类(默认热门)</view>
+    <view onTap="searchSinger" class="singers-name" 
+          id="{{item.key}}"
+          key="{{item.key}}" 
+          a:for="{{singersTypes}}">{{item.name}}</view>
+  </scroll-view>
+  <scroll-view scroll-x="{{true}}" class="x-scroll-box" >
+    <view class="tittle">首字母</view>
+    <view onTap="searchSinger" 
+          class="letter" key="{{item.key}}" 
+          id="{{item.key}}"
+          a:for="{{alphaTypes}}">{{item.name}}</view>
+  </scroll-view>
   </view>
-  <view>
-    <text>首字母</text>
-    <text class="letter" a:for="{{letterlist}}">{{item}}</text>
-  </view>
-  <view a:for="{{list}}" class="singer-box">
-    <image class="singerPic" mode="aspectFit" src="{{item.picUrl}}"/>
-    <text>{{item.name}}</text>
-  </view>
+    <view a:for="{{list}}" class="singer-box">
+      <image class="singerPic" mode="aspectFit" src="{{item.picUrl}}"/>
+      <text>{{item.name}}</text>
+    </view>
 </view>

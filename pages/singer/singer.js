@@ -1,9 +1,10 @@
 import {axios} from "../../util/util";
-
+import {singersTypes,alphaTypes} from "../../util/api";
 Page({
   data: {
     list:[],
-    letterlist:["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+    alphaTypes:alphaTypes,
+    singersTypes:singersTypes,
     singerlist:[]
   },
   onLoad() {},
@@ -16,5 +17,8 @@ Page({
         list: res.data.list.artists.slice(0,10)
       })
     })
+  },
+  searchSinger(e){
+    console.log(e.target)
   }
 });
