@@ -1,3 +1,16 @@
 <view>
-  rank 排名
+  <text>官方榜</text>
+  <view>
+    <view class="rank-card" a:for="{{rankList}}">
+      <view class="coverImg" style="background-image:url({{item.coverImgUrl}})">
+      {{item.updateFrequency}}
+      </view>
+      <view>
+        <view a:for="{{item.tracks}}">
+          {{item.first}}
+          {{item.second}}
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

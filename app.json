@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/rank/rank",
     "pages/singer/singer",
     "pages/index/index",
-    "pages/login/login",
-    "pages/rank/rank"
+    "pages/login/login"
   ],
   "window": {
     "defaultTitle": "云音乐",

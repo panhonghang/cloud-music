@@ -1,0 +1,14 @@
+.rank-card{
+  width: 95%;
+  margin: 20rpx auto;
+  display: flex;
+  justify-content: flex-start;
+  height: 200rpx;
+  border: 1px solid red;
+  font-size: 20rpx;
+}
+.coverImg{
+  width: 200rpx;
+  height: 200rpx;
+  background-size: cover;
+}
